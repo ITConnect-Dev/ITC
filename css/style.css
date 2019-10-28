@@ -1,12 +1,57 @@
+form {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#label {
+    width: 20%;
+    /* positions the label text beside the input */
+    text-align: right;
+}
+
+#label + .input {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+/* only the submit button is matched by this selector,
+   but to be sure you could use an id or class for that button */
+.input + .input {
+    float: right;
+}
+
 .center
 {
   margin: auto;
   text-align: center;
 }
 
-.title
+.left
+{
+  margin: auto;
+  text-align: left;
+  max-width: 600px;
+}
+
+.headerImg
+{
+  width: 240px;
+  height: 131.5px;
+
+}
+
+.header
 {
   margin-bottom: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.title
+{
   font-weight: bold;
   text-decoration: underline;
 }
@@ -14,78 +59,154 @@
 .subTitle
 {
   padding: inherit;
-  margin-bottom: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
 }
 
 .space
 {
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+}
+
+.space h5
+{
+  margin-bottom: 1rem;
+}
+
+.selectSml
+{
+  padding: 0 0;
+  font-size: 1.15rem;
+  height: 25px;
+  width: ;
 }
 
 .field
 {
   display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
-/*
-.select
+
+.fieldAlt
 {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.field, .center h6
+{
+}
+
+.smlBox
+{
+  max-width: 550px;
+  margin: auto;
+}
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.fade
+{
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+  }
+
+  #submit
+  {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  #return-to-top {
+  position: fixed;
+  bottom: 27.5px;
+  right: 20px;
+  background: rgba(250, 163, 52, 1);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  border: 5px solid #fff;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+  -webkit-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
   position: relative;
-  width: 25%;
+  left: 14.5px;
+  top: 11.5px;
+  font-size: 25px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.select select {
-  display: none;
+
+
+#return-to-top:hover {
+  background: #fff;
+  border-color: #faa334;
 }
 
-
-.select-selected {
-  background-color: #000;
+#return-to-top:hover i {
+  color: rgba(250, 163, 52, 1);
 }
 
-.select-selected:after
+#-error, #authName-error, #reqName-error, #username-error, #position-error
 {
   position: absolute;
-  content: "";
-  top: 65px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  float: right;
+  left: 35em;
+  color: red;
+  text-align: right;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 60px;
-  transition: ease-in-out;
+#authName-error
+{
+  top: 17.25em;
 }
 
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
+#reqName-error
+{
+  top: 20em;
 }
 
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: orange;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+#username-error
+{
+  top: 31em;
 }
 
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
+#position-error
+{
+  top: 33.5em;
 }
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
