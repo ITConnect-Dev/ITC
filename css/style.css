@@ -2,11 +2,33 @@
 {
   margin: auto;
   text-align: center;
+  max-width: 600px;
 }
+
+.left
+{
+  margin: auto;
+  text-align: left;
+  max-width: 600px;
+}
+
+.headerImg
+{
+  width: 240px;
+  height: 131.5px;
+
+}
+
+.header
+{
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 
 .title
 {
-  margin-bottom: 1.5em;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -14,78 +36,42 @@
 .subTitle
 {
   padding: inherit;
-  margin-bottom: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
 }
 
 .space
 {
   margin-top: 1.5em;
-  margin-bottom: 1.5em;
+}
+
+.space h5
+{
+  margin-bottom: 1rem;
+}
+
+.selectSml
+{
+  padding: 0 0;
+  font-size: 1.15rem;
+  height: 25px;
 }
 
 .field
 {
   display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
-/*
-.select
+
+.fieldAlt
 {
-  position: relative;
-  width: 25%;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.select select {
-  display: none;
-}
-
-
-.select-selected {
-  background-color: #000;
-}
-
-.select-selected:after
+.field, .center h6
 {
-  position: absolute;
-  content: "";
-  top: 65px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
 }
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 60px;
-  transition: ease-in-out;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: orange;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
