@@ -74,7 +74,7 @@
           <div class="">
             <fieldset role="group">
               <legend class="">
-                <h4 class="noMargin">Information of Requested User</h4>
+                <h5 class="noMargin">Information of Requested User</h5>
               </legend>
               <div class="left">
                   <label id="label" class="title field" for="username">User's Name: </label>
@@ -296,11 +296,40 @@
 
             <!-- Hardware Request -->
             <div id="subOption2" class="group2 center">
-              <fieldset role="group2">
+              <fieldset role="group">
                 <legend class="space">
-                  <h5><span class="title">Type of hardware</span></h5>
+                  <h5 class="noMargin">Machine Information</h5>
                 </legend>
-                <div class="center">
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Machine Name: </label>
+                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
+                </div>
+              </div>
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Department: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+                <div class="left">
+                  <label id="label" class="title field" for="">Site Location: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+              </div>
+                <div class="space center">
+                  <h5 class="noMargin">Type of hardware</h5>
                   <div class="field">
                     <label class="title" for="">Computer</label>
                     <input type="checkbox" id="" name="Computer" value="Computer" class="">
@@ -323,11 +352,40 @@
 
             <!-- Software Request -->
             <div id="subOption3" class="group2 center">
-              <fieldset role="group2">
+              <fieldset role="group">
                 <legend class="space">
-                  <h5><span class="title">Type of Software</span></h5>
+                  <h5 class="noMargin">Machine Information</h5>
                 </legend>
-                <div class="center">
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Machine Name: </label>
+                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
+                </div>
+              </div>
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Department: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+                <div class="left">
+                  <label id="label" class="title field" for="">Site Location: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+              </div>
+                <div class="space center">
+                  <h5 class="noMargin">Type of Software</h5>
                   <div class="field">
                     <label class="title" for="">Application</label>
                     <input type="checkbox" id="" name="Computer" value="Computer" class="">
@@ -349,32 +407,63 @@
             </div>
 
             <div id="subOption4" class="group2 center">
-              <fieldset role="group2">
-                <legend class="space">
-                  <h5><span class="title">Type of hardware</span></h5>
-                </legend>
-                <div class="center">
-                  <div class="field">
-                    <label class="title" for="">Computer</label>
-                    <input type="checkbox" id="" name="Computer" value="Computer" class="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Monitor</label>
-                    <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Peripherals</label>
-                    <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Other</label>
-                    <input type="checkbox" id="" name="" value="Other" class="" required="true">
+              <div class="space">
+                <fieldset role="group">
+                  <legend class="space">
+                    <h5 class="noMargin">Machine Information</h5>
+                  </legend>
+                <div class="left">
+                  <div class="left">
+                    <label id="label" class="title field" for="">Machine Name: </label>
+                    <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
                   </div>
                 </div>
-              </fieldset>
+                <div class="left">
+                  <div class="left">
+                    <label id="label" class="title field" for="">Department: </label>
+                    <select id="selectMe" class="input">
+                      <option value="1">Field Construction</option> <!-- Sub-location -->
+                      <option value="2">Field ABFP</option>
+                      <option value="3">Field BCFP</option>
+                      <option value="4">Site</option>
+                      <option value="5">Office</option>
+                    </select>
+                  </div>
+                  <div class="left">
+                    <label id="label" class="title field" for="">Site Location: </label>
+                    <select id="selectMe" class="input">
+                      <option value="1">Field Construction</option> <!-- Sub-location -->
+                      <option value="2">Field ABFP</option>
+                      <option value="3">Field BCFP</option>
+                      <option value="4">Site</option>
+                      <option value="5">Office</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="space center">
+                  <h5 class="noMargin">Type of hardware</h5>
+                    <div class="field">
+                      <label class="title" for="">Computer</label>
+                      <input type="checkbox" id="" name="Computer" value="Computer" class="">
+                    </div>
+                    <div class="field">
+                      <label class="title" for="">Monitor</label>
+                      <input type="checkbox" id="" name="" value="Projector" class="" required="">
+                    </div>
+                    <div class="field">
+                      <label class="title" for="">Peripherals</label>
+                      <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
+                    </div>
+                    <div class="field">
+                      <label class="title" for="">Other</label>
+                      <input type="checkbox" id="" name="" value="Other" class="" required="true">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
               <fieldset role="group2">
                 <legend class="space">
-                  <h5><span class="title">Type of Software</span></h5>
+                    <h5 class="noMargin">Type of Software</h5>
                 </legend>
                 <div class="center">
                   <div class="field">
@@ -403,40 +492,39 @@
           <div id="option2" class="group center">
             <div class="space">
               <fieldset role="group">
-              <div class="left">
-                <div class="field">
-                  <h6><span class="title">Machine Name: </span></h6>
-                </div>
-                <div class="field">
-                  <input type="text" class="" name="" value="" required="required" placeholder="GISXXDX-1234567">
-                </div>
-              </div>
-              <div class="left">
-                <div class="left">
-                  <label id="" class="title field" for="">Department: </label>
-                  <select id="selectMe">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-                <div class="left">
-                  <label id="" class="title field" for="">Site Location: </label>
-                  <select id="selectMe">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-              </div>
                 <legend class="space">
-                  <h5><span class="title">Type of hardware</span></h5>
+                  <h5 class="noMargin">Machine Information</h5>
                 </legend>
-                <div class="center">
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Machine Name: </label>
+                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
+                </div>
+              </div>
+              <div class="left">
+                <div class="left">
+                  <label id="label" class="title field" for="">Department: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+                <div class="left">
+                  <label id="label" class="title field" for="">Site Location: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Field Construction</option> <!-- Sub-location -->
+                    <option value="2">Field ABFP</option>
+                    <option value="3">Field BCFP</option>
+                    <option value="4">Site</option>
+                    <option value="5">Office</option>
+                  </select>
+                </div>
+              </div>
+                <div class="space center">
+                  <h5 class="noMargin">Type of hardware</h5>
                   <div class="field">
                     <label class="title" for="">Computer</label>
                     <input type="checkbox" id="" name="Computer" value="Computer" class="">
@@ -464,40 +552,39 @@
         <div id="option3" class="group center">
           <div class="space">
             <fieldset role="group">
-            <div class="left">
-              <div class="field">
-                <h6><span class="title">Machine Name: </span></h6>
-              </div>
-              <div class="field">
-                <input type="text" class="" name="" value="" required="required" placeholder="GISXXDX-1234567">
-              </div>
-            </div>
-            <div class="left">
-              <div class="left">
-                <label id="" class="title field" for="">Department: </label>
-                <select id="selectMe">
-                  <option value="1">Field Construction</option> <!-- Sub-location -->
-                  <option value="2">Field ABFP</option>
-                  <option value="3">Field BCFP</option>
-                  <option value="4">Site</option>
-                  <option value="5">Office</option>
-                </select>
-              </div>
-              <div class="left">
-                <label id="" class="title field" for="">Site Location: </label>
-                <select id="selectMe">
-                  <option value="1">Field Construction</option> <!-- Sub-location -->
-                  <option value="2">Field ABFP</option>
-                  <option value="3">Field BCFP</option>
-                  <option value="4">Site</option>
-                  <option value="5">Office</option>
-                </select>
-              </div>
-            </div>
               <legend class="space">
-                <h5><span class="title">Type of Software</span></h5>
+                <h5 class="noMargin">Machine Information</h5>
               </legend>
-              <div class="center">
+            <div class="left">
+              <div class="left">
+                <label id="label" class="title field" for="">Machine Name: </label>
+                <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
+              </div>
+            </div>
+            <div class="left">
+              <div class="left">
+                <label id="label" class="title field" for="">Department: </label>
+                <select id="selectMe" class="input">
+                  <option value="1">Field Construction</option> <!-- Sub-location -->
+                  <option value="2">Field ABFP</option>
+                  <option value="3">Field BCFP</option>
+                  <option value="4">Site</option>
+                  <option value="5">Office</option>
+                </select>
+              </div>
+              <div class="left">
+                <label id="label" class="title field" for="">Site Location: </label>
+                <select id="selectMe" class="input">
+                  <option value="1">Field Construction</option> <!-- Sub-location -->
+                  <option value="2">Field ABFP</option>
+                  <option value="3">Field BCFP</option>
+                  <option value="4">Site</option>
+                  <option value="5">Office</option>
+                </select>
+              </div>
+            </div>
+              <div class="space center">
+                <h5 class="noMargin">Type of Software</h5>
                 <div class="field">
                   <label class="title" for="">Application</label>
                   <input type="checkbox" id="" name="Computer" value="Computer" class="">
