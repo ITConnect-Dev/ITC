@@ -1,8 +1,31 @@
+form {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#label {
+    width: 20%;
+    /* positions the label text beside the input */
+    text-align: right;
+}
+
+#label + .input {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+/* only the submit button is matched by this selector,
+   but to be sure you could use an id or class for that button */
+.input + .input {
+    float: right;
+}
+
 .center
 {
   margin: auto;
   text-align: center;
-  max-width: 600px;
 }
 
 .left
@@ -56,6 +79,7 @@
   padding: 0 0;
   font-size: 1.15rem;
   height: 25px;
+  width: ;
 }
 
 .field
@@ -74,4 +98,115 @@
 
 .field, .center h6
 {
+}
+
+.smlBox
+{
+  max-width: 550px;
+  margin: auto;
+}
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.fade
+{
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+  }
+
+  #submit
+  {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  #return-to-top {
+  position: fixed;
+  bottom: 27.5px;
+  right: 20px;
+  background: rgba(250, 163, 52, 1);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  border: 5px solid #fff;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+  -webkit-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 14.5px;
+  top: 11.5px;
+  font-size: 25px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+#return-to-top:hover {
+  background: #fff;
+  border-color: #faa334;
+}
+
+#return-to-top:hover i {
+  color: rgba(250, 163, 52, 1);
+}
+
+#-error, #authName-error, #reqName-error, #username-error, #position-error
+{
+  position: absolute;
+  float: right;
+  left: 35em;
+  color: red;
+  text-align: right;
+}
+
+#authName-error
+{
+  top: 17.25em;
+}
+
+#reqName-error
+{
+  top: 20em;
+}
+
+#username-error
+{
+  top: 31em;
+}
+
+#position-error
+{
+  top: 33.5em;
 }

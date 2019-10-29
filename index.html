@@ -22,6 +22,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.1/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- Favicon
@@ -31,8 +32,10 @@
 </head>
 
 <body>
-  <div class="container">
-    <form method="post" accept-charset="UTF-8" novalidate="" action="/my-handling-form-page" class="" id="">
+  <!-- Return to Top -->
+	<a href="#top" id="return-to-top"><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
+  <div class="container" id="top">
+    <form method="post" accept-charset="UTF-8" novalidate="" action="/my-handling-form-page" class="" id="requestForm">
       <div class="" id="" lang="en">
         <p class="center">
           <img class="headerImg" src="images/ITC-L3.png">
@@ -46,32 +49,22 @@
 
         <!-- Authorized by -->
         <div class="left">
-          <div class="field">
-            <div class="field">
-              <h6><span class="header">Authorized by: </span></h6>
-            </div>
-            <div class="field">
-              <input type="text" class="" name="" value="" required="required" placeholder="Full Name">
-            </div>
+          <div class="">
+              <label id="label" class="title field" for="">Authorized By: </label>
+              <input type="text" class="input" id="authName" name="authName" value="" required="required" placeholder="Full Name">
           </div>
 
           <!-- Requester Info -->
-          <div class="field">
-            <div class="field">
-              <h6><span class="header">Requested By: </span></h6>
-            </div>
-            <div class="field">
-              <input type="text" class="" name="" value="" required="required" placeholder="Full Name">
-            </div>
+          <div class="">
+              <label id="label" class="title field" for="">Requested By: </label>
+              <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
           </div>
         </div>
 
         <!-- Request Type -->
         <div class="left select">
-          <div class="field subheader">
-            <span class="header">Please select request type: </span>
-          </div>
-          <select id="selectMe" class="field">
+          <label id="label" class="title field" for="">Please select request type: </label>
+          <select id="selectMe" class="field input">
             <option value="option1">User</option>
             <option value="option2">Hardware</option>
             <option value="option3">Software</option>
@@ -86,48 +79,48 @@
                 <h5><span class="title">Information of Requested User</span></h5>
               </legend>
               <div class="left">
-                <div class="field">
-                  <h6><span class="title">User's Name: </span></h6>
-                </div>
-                <div class="field">
-                  <input type="text" class="" name="" value="" required="required" placeholder="Full Name">
-                </div>
+                  <label id="label" class="title field" for="username">User's Name: </label>
+                  <input id="username" type="text" class="input" name="username" value="" required="true" placeholder="Full Name">
               </div>
               <div class="left">
                 <div class="left">
-                  <label id="" class="title field" for="">Department: </label>
-                  <select id="selectMe">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
+                  <label id="label" class="title field" for="position">Position: </label>
+                  <input id="position" class="input" type="text" name="position" value="" required="true" placeholder="Position">
+                </div>
+                <div class="left">
+                  <label id="label" class="title field" for="">Department: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Construction</option> <!-- Sub-location -->
+                    <option value="2">Fire Protection</option>
+                    <option value="3">Engineering</option>
                     <option value="4">Site</option>
                     <option value="5">Office</option>
                   </select>
                 </div>
                 <div class="left">
-                  <label id="" class="title field" for="">Site Location: </label>
-                  <select id="selectMe">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
+                  <label id="label" class="title field" for="">Site Location: </label>
+                  <select id="selectMe" class="input">
+                    <option value="1">Burnaby</option> <!-- Sub-location -->
+                    <option value="2">Edmonton</option>
+                    <option value="3">Teck EVO</option>
+                    <option value="4">Kemess</option>
+                    <option value="5">Field</option>
                   </select>
                 </div>
               </div>
               <!-- Drive Access -->
               <div class="left">
-                <label id="" class="title field" for="">Drive Access: </label>
-                <select id="selectMe">
-                  <option value="1">None</option>
-                  <option value="2">BBY S:</option>
-                  <option value="3">Teck EVO S:</option>
-                  <option value="4"></option>
-                  <option value="5"></option>
+                <label id="label" class="title field" for="">Drive Access: </label>
+                <select id="selectMe3" class="input">
+                  <option value="ss1">None</option>
+                  <option value="ss2">BBY S:</option>
+                  <option value="ss2">Teck EVO S:</option>
+                  <option value="ss2">Kemess S:</option>
+                  <option value="ss2">Other</option>
                 </select>
               </div>
               <!--Drive Permissions-->
-              <div class="row">
+              <div id="ss2" class="group3 row smlBox space">
                 <label id="" class="title" for="">Folders Permissions: </label>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">01</label>
@@ -292,9 +285,9 @@
               </div>
             </fieldset>
 
-            <div class="col-1 fieldAlt">
-              <label id="" class="title" for="">Additional Requests: </label>
-              <select id="selectMe2" class="">
+            <div class="left">
+              <label id="label" class="title field" for="">Additional Requests: </label>
+              <select id="selectMe2" class="input">
                 <option value="subOption1">N/A</option>
                 <option value="subOption2">Hardware</option>
                 <option value="subOption3">Software</option>
@@ -536,18 +529,35 @@
                 aria-describedby=" "></textarea>
               <span id="" aria-live="polite" aria-atomic="true" tabindex="-1"></span>
             </div>
-            <div class="center">
-              <span class="">Characters remaining: </span>
-              <div class="center" style="width: 683px;">300/300</div>
-            </div>
           </div>
         </div>
         <div class="center space">
-          <input id="" class="" style="" type="submit" value="Submit Request">
+          <input id="submit" class="btn btn-primary" type="submit" value="Submit Request">
         </div>
     </form>
+<!-- modal -->
+    <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+             <h3 id="myModalLabel3">Confirmation Heading</h3>
+          </div>
+          <div class="modal-body">
+            <p>Are You Sure You want To submit The Form</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close This Modal</button>
+            <button class="btn-primary btn" id="SubForm">Confirm and Submit The Form</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- end modal -->
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
