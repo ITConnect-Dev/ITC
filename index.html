@@ -36,15 +36,13 @@
 	<a href="#top" id="return-to-top"><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
   <div class="container" id="top">
     <form method="post" accept-charset="UTF-8" novalidate="" action="/my-handling-form-page" class="" id="requestForm">
-      <div class="" id="" lang="en">
-        <p class="center">
+      <div class="mainBanner" id="" lang="en">
           <img class="headerImg" src="images/ITC-L3.png">
-        </p>
       </div>
       <div id="" class="">
         <div class="center">
-          <h2>IT Service Request Form</h2>
-          <h6>Please fill out this form and an IT service team member will be in touch with you shortly.</h6>
+          <h4 class="noMargin">Service Request Form</h4>
+          <h6 class="title">Please fill out this form and an IT service team member will be in touch with you shortly.</h6>
         </div>
 
         <!-- Authorized by -->
@@ -59,24 +57,24 @@
               <label id="label" class="title field" for="">Requested By: </label>
               <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
           </div>
-        </div>
 
         <!-- Request Type -->
-        <div class="left select">
-          <label id="label" class="title field" for="">Please select request type: </label>
+        <div class="select">
+          <label id="label" class="title field" for="">Request type: </label>
           <select id="selectMe" class="field input">
             <option value="option1">User</option>
             <option value="option2">Hardware</option>
             <option value="option3">Software</option>
           </select>
         </div>
+      </div>
 
         <!-- User Request -->
-        <div id="option1" class="group center">
-          <div class="space">
+        <div id="option1" class="group center space">
+          <div class="">
             <fieldset role="group">
-              <legend class="space">
-                <h5><span class="title">Information of Requested User</span></h5>
+              <legend class="">
+                <h4 class="noMargin">Information of Requested User</h4>
               </legend>
               <div class="left">
                   <label id="label" class="title field" for="username">User's Name: </label>
@@ -121,10 +119,10 @@
               </div>
               <!--Drive Permissions-->
               <div id="ss2" class="group3 row smlBox space">
-                <label id="" class="title" for="">Folders Permissions: </label>
+                <label id="" class="space title" for="">Folders Permissions: </label>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">01</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -132,7 +130,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">02</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -140,7 +138,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">03</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -148,7 +146,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">04</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -156,7 +154,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">05</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -164,7 +162,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">06</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -172,7 +170,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">07</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -180,7 +178,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">08</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -188,7 +186,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">09</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -196,7 +194,7 @@
                 </div>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">10</label>
-                  <select id="selectMe" class="selectSml">
+                  <select id="selectMe" class="selectSml noMargin">
                     <option value="1">N/A</option>
                     <option value="2">R/W</option>
                     <option value="3">R/O</option>
@@ -283,17 +281,18 @@
                   </select>
                 </div>
               </div>
-            </fieldset>
 
-            <div class="left">
-              <label id="label" class="title field" for="">Additional Requests: </label>
-              <select id="selectMe2" class="input">
-                <option value="subOption1">N/A</option>
-                <option value="subOption2">Hardware</option>
-                <option value="subOption3">Software</option>
-                <option value="subOption4">Both</option>
-              </select>
-            </div>
+            <!-- Additional Request -->
+              <div class="left select">
+                <label id="label" class="title field" for="">Other Requests: </label>
+                <select id="selectMe2" class="input">
+                  <option value="subOption1">N/A</option>
+                  <option value="subOption2">Hardware</option>
+                  <option value="subOption3">Software</option>
+                  <option value="subOption4">Both</option>
+                </select>
+              </div>
+            </fieldset>
 
             <!-- Hardware Request -->
             <div id="subOption2" class="group2 center">

@@ -22,6 +22,14 @@ form {
     float: right;
 }
 
+.mainBanner
+{
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0;
+  max-height: 115px;
+}
+
 .center
 {
   margin: auto;
@@ -49,7 +57,6 @@ form {
   text-decoration: underline;
 }
 
-
 .title
 {
   font-weight: bold;
@@ -64,6 +71,11 @@ form {
   display: inline-block;
 }
 
+.noMargin
+{
+  margin-bottom: 0;
+}
+
 .space
 {
   margin-top: 1.5em;
@@ -74,12 +86,22 @@ form {
   margin-bottom: 1rem;
 }
 
+.select
+{
+  max-height: 38px;
+}
+
 .selectSml
 {
   padding: 0 0;
   font-size: 1.15rem;
   height: 25px;
   width: ;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .field
@@ -171,8 +193,6 @@ form {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 #return-to-top:hover {
   background: #fff;
   border-color: #faa334;
@@ -180,6 +200,15 @@ form {
 
 #return-to-top:hover i {
   color: rgba(250, 163, 52, 1);
+}
+
+#selectMe, #selectMe2, #selectMe3
+{
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #-error, #authName-error, #reqName-error, #username-error, #position-error
@@ -193,20 +222,20 @@ form {
 
 #authName-error
 {
-  top: 17.25em;
+  top: 13.5em;
 }
 
 #reqName-error
 {
-  top: 20em;
+  top: 16.15em;
 }
 
 #username-error
 {
-  top: 31em;
+  top: 26em;
 }
 
 #position-error
 {
-  top: 33.5em;
+  top: 28.5em;
 }
