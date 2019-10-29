@@ -35,9 +35,9 @@
   <!-- Return to Top -->
 	<a href="#top" id="return-to-top"><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
   <div class="container" id="top">
-    <form method="post" accept-charset="UTF-8" novalidate="" action="/my-handling-form-page" class="" id="requestForm">
+    <form method="post" accept-charset="UTF-8" novalidate="" action="index.php" class="" id="requestForm">
       <div class="mainBanner" id="" lang="en">
-          <img class="headerImg" src="images/ITC-L3.png">
+          <img class="headerImg" src="images/mainBanner.png">
       </div>
       <div id="" class="">
         <div class="center">
@@ -618,28 +618,26 @@
           </div>
         </div>
         <div class="center space">
-          <input id="submit" class="btn btn-primary" type="submit" value="Submit Request">
+          <input id="btnSubmit" class="btn btn-primary" type="submit" value="Submit Request">
         </div>
     </form>
+
 <!-- modal -->
     <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-             <h3 id="myModalLabel3">Confirmation Heading</h3>
-          </div>
           <div class="modal-body">
-            <p>Are You Sure You want To submit The Form</p>
+            <p>Are you sure you want to submit this request?</p>
           </div>
           <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close This Modal</button>
-            <button class="btn-primary btn" id="SubForm">Confirm and Submit The Form</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn-primary btn" id="SubForm">Confirm and Submit The Request</button>
           </div>
         </div>
       </div>
     </div>
 <!-- end modal -->
+
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>

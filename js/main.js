@@ -48,9 +48,9 @@ $(document).ready(function () {
       },
       submitHandler: function (form) {
           $("#myModal").modal('show');
-  		$('#SubForm').click(function () {
+  		    $('#SubForm').click(function () {
               form.submit();
-         });
+          });
       }
   });
 });
