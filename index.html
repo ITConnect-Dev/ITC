@@ -36,17 +36,32 @@
 	<a href="#top" id="return-to-top"><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
   <div class="container" id="top">
     <form method="post" accept-charset="UTF-8" novalidate="" action="index.php" class="" id="requestForm">
-      <div class="mainBanner" id="" lang="en">
-          <img class="headerImg" src="images/mainBanner.png">
+      <div class="mainBanner row" id="" lang="en">
+        <div class="columns four borderRight">
+          <img class="headerImg" src="images/gisborne_logo_txt.png">
+        </div>
+        <div class="columns four">
+          <h5 class="spaced">Service Request Form</h5>
+        </div>
+        <div class="columns four borderLeft">
+          <p class="infoColumn">
+            7476 Hedley Avenue</br>
+            Burnaby, B.C.</br>
+            Canada, V5E2P9</br>
+            (604) 520 7300
+          </p>
+        </div>
       </div>
       <div id="" class="">
-        <div class="center">
-          <h4 class="noMargin">Service Request Form</h4>
-          <h6 class="title">Please fill out this form and an IT service team member will be in touch with you shortly.</h6>
-        </div>
-
-        <!-- Authorized by -->
         <div class="left">
+
+          <!-- Requester Date -->
+          <div class="">
+              <label id="label" class="title field" for="">Request Date: </label>
+              <input type="date" id="datePicker" class="input">
+          </div>
+
+          <!-- Authorized by -->
           <div class="">
               <label id="label" class="title field" for="">Authorized By: </label>
               <input type="text" class="input" id="authName" name="authName" value="" required="required" placeholder="Full Name">
@@ -56,6 +71,13 @@
           <div class="">
               <label id="label" class="title field" for="">Requested By: </label>
               <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
+          </div>
+
+
+          <!-- Shipping Info -->
+          <div class="">
+              <label id="label" class="title field" for="">Shipping Information: </label>
+              <textarea id="shipping" class="input" placeholder="Please enter your address" maxlength="300" value=""></textarea>
           </div>
 
         <!-- Request Type -->
@@ -111,14 +133,31 @@
                 <label id="label" class="title field" for="">Drive Access: </label>
                 <select id="selectMe3" class="input">
                   <option value="ss1">None</option>
-                  <option value="ss2">BBY S:</option>
-                  <option value="ss2">Teck EVO S:</option>
-                  <option value="ss2">Kemess S:</option>
-                  <option value="ss2">Other</option>
+                  <option value="ss1">BBY S:</option>
+                  <option value="ss1">EDM S:</option>
+                  <option value="ss2">Site</option>
                 </select>
               </div>
+              <!-- Additional Request -->
+                <div class="left">
+                  <label id="label" class="title field" for="">Other Requests: </label>
+                  <select id="selectMe2" class="input">
+                    <option value="subOption1">N/A</option>
+                    <option value="subOption2">Hardware</option>
+                    <option value="subOption3">Software</option>
+                    <option value="subOption4">Both</option>
+                  </select>
+                </div>
               <!--Drive Permissions-->
-              <div id="ss2" class="group3 row smlBox space">
+              <div id="ss2" class="group3">
+              <div class="left">
+                <!-- Requester Info -->
+                <div class="">
+                    <label id="label" class="title field" for="">Site Name: </label>
+                    <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
+                </div>
+              </div>
+              <div id="" class=" row smlBox space">
                 <label id="" class="space title" for="">Folders Permissions: </label>
                 <div class="col-1 fieldAlt">
                   <label id="" class="title" for="">01</label>
@@ -281,208 +320,71 @@
                   </select>
                 </div>
               </div>
-
-            <!-- Additional Request -->
-              <div class="left select">
-                <label id="label" class="title field" for="">Other Requests: </label>
-                <select id="selectMe2" class="input">
-                  <option value="subOption1">N/A</option>
-                  <option value="subOption2">Hardware</option>
-                  <option value="subOption3">Software</option>
-                  <option value="subOption4">Both</option>
-                </select>
-              </div>
             </fieldset>
 
             <!-- Hardware Request -->
             <div id="subOption2" class="group2 center">
               <fieldset role="group">
-                <legend class="space">
-                  <h5 class="noMargin">Machine Information</h5>
-                </legend>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Machine Name: </label>
-                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
-                </div>
-              </div>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Department: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-                <div class="left">
-                  <label id="label" class="title field" for="">Site Location: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-              </div>
-                <div class="space center">
-                  <h5 class="noMargin">Type of hardware</h5>
-                  <div class="field">
-                    <label class="title" for="">Computer</label>
-                    <input type="checkbox" id="" name="Computer" value="Computer" class="">
+                <!-- Hardware Request -->
+                  <div class="left">
+                    <label id="label" class="title field" for="">Hardware Type: </label>
+                    <select id="selectMe2" class="input">
+                      <option value="subOption0">N/A</option>
+                      <option value="subOption1">Phone</option>
+                      <option value="subOption2">Tablet</option>
+                      <option value="subOption3">Laptop</option>
+                      <option value="subOption4">Desktop</option>
+                      <option value="subOption5">Peripherals</option>
+                    </select>
                   </div>
-                  <div class="field">
-                    <label class="title" for="">Monitor</label>
-                    <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Peripherals</label>
-                    <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Other</label>
-                    <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                  </div>
-                </div>
               </fieldset>
             </div>
 
             <!-- Software Request -->
             <div id="subOption3" class="group2 center">
               <fieldset role="group">
-                <legend class="space">
-                  <h5 class="noMargin">Machine Information</h5>
-                </legend>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Machine Name: </label>
-                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
-                </div>
-              </div>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Department: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-                <div class="left">
-                  <label id="label" class="title field" for="">Site Location: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-              </div>
-                <div class="space center">
-                  <h5 class="noMargin">Type of Software</h5>
-                  <div class="field">
-                    <label class="title" for="">Application</label>
-                    <input type="checkbox" id="" name="Computer" value="Computer" class="">
+                  <div class="left">
+                    <label id="label" class="title field" for="">Software Type: </label>
+                    <select id="selectMe2" class="input">
+                      <option value="subOption0">N/A</option>
+                      <option value="subOption1">Application</option>
+                      <option value="subOption2">Driver</option>
+                      <option value="subOption3">Cleanup</option>
+                      <option value="subOption4">Update</option>
+                    </select>
                   </div>
-                  <div class="field">
-                    <label class="title" for="">Driver</label>
-                    <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Update</label>
-                    <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Clean up</label>
-                    <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                  </div>
-                </div>
               </fieldset>
             </div>
 
             <div id="subOption4" class="group2 center">
               <div class="space">
                 <fieldset role="group">
-                  <legend class="space">
-                    <h5 class="noMargin">Machine Information</h5>
-                  </legend>
-                <div class="left">
-                  <div class="left">
-                    <label id="label" class="title field" for="">Machine Name: </label>
-                    <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
-                  </div>
-                </div>
-                <div class="left">
-                  <div class="left">
-                    <label id="label" class="title field" for="">Department: </label>
-                    <select id="selectMe" class="input">
-                      <option value="1">Field Construction</option> <!-- Sub-location -->
-                      <option value="2">Field ABFP</option>
-                      <option value="3">Field BCFP</option>
-                      <option value="4">Site</option>
-                      <option value="5">Office</option>
-                    </select>
-                  </div>
-                  <div class="left">
-                    <label id="label" class="title field" for="">Site Location: </label>
-                    <select id="selectMe" class="input">
-                      <option value="1">Field Construction</option> <!-- Sub-location -->
-                      <option value="2">Field ABFP</option>
-                      <option value="3">Field BCFP</option>
-                      <option value="4">Site</option>
-                      <option value="5">Office</option>
-                    </select>
-                  </div>
-                </div>
-                  <div class="space center">
-                  <h5 class="noMargin">Type of hardware</h5>
-                    <div class="field">
-                      <label class="title" for="">Computer</label>
-                      <input type="checkbox" id="" name="Computer" value="Computer" class="">
+                  <!-- Hardware Request -->
+                    <div class="left">
+                      <label id="label" class="title field" for="">Hardware Type: </label>
+                      <select id="selectMe2" class="input">
+                        <option value="subOption0">N/A</option>
+                        <option value="subOption1">Phone</option>
+                        <option value="subOption2">Tablet</option>
+                        <option value="subOption3">Laptop</option>
+                        <option value="subOption4">Desktop</option>
+                        <option value="subOption5">Peripherals</option>
+                      </select>
                     </div>
-                    <div class="field">
-                      <label class="title" for="">Monitor</label>
-                      <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                    </div>
-                    <div class="field">
-                      <label class="title" for="">Peripherals</label>
-                      <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                    </div>
-                    <div class="field">
-                      <label class="title" for="">Other</label>
-                      <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                    </div>
-                  </div>
                 </fieldset>
               </div>
               <fieldset role="group2">
-                <legend class="space">
-                    <h5 class="noMargin">Type of Software</h5>
-                </legend>
-                <div class="center">
-                  <div class="field">
-                    <label class="title" for="">Application</label>
-                    <input type="checkbox" id="" name="Computer" value="Computer" class="">
+                <!-- Software Request -->
+                  <div class="left">
+                    <label id="label" class="title field" for="">Software Type: </label>
+                    <select id="selectMe2" class="input">
+                      <option value="subOption0">N/A</option>
+                      <option value="subOption1">Application</option>
+                      <option value="subOption2">Driver</option>
+                      <option value="subOption3">Cleanup</option>
+                      <option value="subOption4">Update</option>
+                    </select>
                   </div>
-                  <div class="field">
-                    <label class="title" for="">Driver</label>
-                    <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Update</label>
-                    <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Clean up</label>
-                    <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                  </div>
-                </div>
               </fieldset>
             </div>
           </div>
@@ -490,121 +392,574 @@
 
 <!-- Hardware Request -->
           <div id="option2" class="group center">
+            <!-- Hardware Request -->
+              <div class="left">
+                <label id="label" class="title field" for="">Hardware Type: </label>
+                <select id="selectMe2" class="input">
+                  <option value="subOption0">N/A</option>
+                  <option value="subOption1">Phone</option>
+                  <option value="subOption2">Tablet</option>
+                  <option value="subOption3">Laptop</option>
+                  <option value="subOption4">Desktop</option>
+                  <option value="subOption5">Peripherals</option>
+                </select>
+              </div>
             <div class="space">
               <fieldset role="group">
-                <legend class="space">
-                  <h5 class="noMargin">Machine Information</h5>
-                </legend>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Machine Name: </label>
-                  <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
-                </div>
-              </div>
-              <div class="left">
-                <div class="left">
-                  <label id="label" class="title field" for="">Department: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-                <div class="left">
-                  <label id="label" class="title field" for="">Site Location: </label>
-                  <select id="selectMe" class="input">
-                    <option value="1">Field Construction</option> <!-- Sub-location -->
-                    <option value="2">Field ABFP</option>
-                    <option value="3">Field BCFP</option>
-                    <option value="4">Site</option>
-                    <option value="5">Office</option>
-                  </select>
-                </div>
-              </div>
-                <div class="space center">
-                  <h5 class="noMargin">Type of hardware</h5>
-                  <div class="field">
-                    <label class="title" for="">Computer</label>
-                    <input type="checkbox" id="" name="Computer" value="Computer" class="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Monitor</label>
-                    <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Peripherals</label>
-                    <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                  </div>
-                  <div class="field">
-                    <label class="title" for="">Other</label>
-                    <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-        </div>
+                    <legend class="">
+                      <h5 class="noMargin">Information of Requested User</h5>
+                    </legend>
+                    <div class="left">
+                        <label id="label" class="title field" for="username">User's Name: </label>
+                        <input id="username" type="text" class="input" name="username" value="" required="true" placeholder="Full Name">
+                    </div>
+                    <div class="left">
+                      <div class="left">
+                        <label id="label" class="title field" for="position">Position: </label>
+                        <input id="position" class="input" type="text" name="position" value="" required="true" placeholder="Position">
+                      </div>
+                      <div class="left">
+                        <label id="label" class="title field" for="">Department: </label>
+                        <select id="selectMe" class="input">
+                          <option value="1">Construction</option> <!-- Sub-location -->
+                          <option value="2">Fire Protection</option>
+                          <option value="3">Engineering</option>
+                          <option value="4">Site</option>
+                          <option value="5">Office</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label id="label" class="title field" for="">Site Location: </label>
+                        <select id="selectMe" class="input">
+                          <option value="1">Burnaby</option> <!-- Sub-location -->
+                          <option value="2">Edmonton</option>
+                          <option value="3">Teck EVO</option>
+                          <option value="4">Kemess</option>
+                          <option value="5">Field</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Drive Access -->
+                    <div class="left">
+                      <label id="label" class="title field" for="">Drive Access: </label>
+                      <select id="selectMe3" class="input">
+                        <option value="ss1">None</option>
+                        <option value="ss1">BBY S:</option>
+                        <option value="ss1">EDM S:</option>
+                        <option value="ss2">Site</option>
+                      </select>
+                    </div>
+                    <!-- Additional Request -->
+                      <div class="left">
+                        <label id="label" class="title field" for="">Other Requests: </label>
+                        <select id="selectMe2" class="input">
+                          <option value="subOption1">N/A</option>
+                          <option value="subOption2">Hardware</option>
+                          <option value="subOption3">Software</option>
+                          <option value="subOption4">Both</option>
+                        </select>
+                      </div>
+                    <!--Drive Permissions-->
+                    <div id="ss2" class="group3">
+                    <div class="left">
+                      <!-- Requester Info -->
+                      <div class="">
+                          <label id="label" class="title field" for="">Site Name: </label>
+                          <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
+                      </div>
+                    </div>
+                    <div id="" class=" row smlBox space">
+                      <label id="" class="space title" for="">Folders Permissions: </label>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">01</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">02</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">03</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">04</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">05</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">06</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">07</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">08</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">09</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">10</label>
+                        <select id="selectMe" class="selectSml noMargin">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">11</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">12</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">13</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">14</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">15</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">16</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">17</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">18</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">19</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                      <div class="col-1 fieldAlt">
+                        <label id="" class="title" for="">20</label>
+                        <select id="selectMe" class="selectSml">
+                          <option value="1">N/A</option>
+                          <option value="2">R/W</option>
+                          <option value="3">R/O</option>
+                        </select>
+                      </div>
+                    </div>
+                  </fieldset>
 
+                  <!-- Hardware Request -->
+                  <div id="subOption2" class="group2 center">
+                    <fieldset role="group">
+                      <!-- Hardware Request -->
+                        <div class="left">
+                          <label id="label" class="title field" for="">Hardware Type: </label>
+                          <select id="selectMe2" class="input">
+                            <option value="subOption0">N/A</option>
+                            <option value="subOption1">Phone</option>
+                            <option value="subOption2">Tablet</option>
+                            <option value="subOption3">Laptop</option>
+                            <option value="subOption4">Desktop</option>
+                            <option value="subOption5">Peripherals</option>
+                          </select>
+                        </div>
+                    </fieldset>
+                  </div>
+
+                  <!-- Software Request -->
+                  <div id="subOption3" class="group2 center">
+                    <fieldset role="group">
+                        <div class="left">
+                          <label id="label" class="title field" for="">Software Type: </label>
+                          <select id="selectMe2" class="input">
+                            <option value="subOption0">N/A</option>
+                            <option value="subOption1">Application</option>
+                            <option value="subOption2">Driver</option>
+                            <option value="subOption3">Cleanup</option>
+                            <option value="subOption4">Update</option>
+                          </select>
+                        </div>
+                    </fieldset>
+                  </div>
+
+                  <div id="subOption4" class="group2 center">
+                    <div class="space">
+                      <fieldset role="group">
+                        <!-- Hardware Request -->
+                          <div class="left">
+                            <label id="label" class="title field" for="">Hardware Type: </label>
+                            <select id="selectMe2" class="input">
+                              <option value="subOption0">N/A</option>
+                              <option value="subOption1">Phone</option>
+                              <option value="subOption2">Tablet</option>
+                              <option value="subOption3">Laptop</option>
+                              <option value="subOption4">Desktop</option>
+                              <option value="subOption5">Peripherals</option>
+                            </select>
+                          </div>
+                      </fieldset>
+                    </div>
+                    <fieldset role="group2">
+                      <!-- Software Request -->
+                        <div class="left">
+                          <label id="label" class="title field" for="">Software Type: </label>
+                          <select id="selectMe2" class="input">
+                            <option value="subOption0">N/A</option>
+                            <option value="subOption1">Application</option>
+                            <option value="subOption2">Driver</option>
+                            <option value="subOption3">Cleanup</option>
+                            <option value="subOption4">Update</option>
+                          </select>
+                        </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 <!-- Software Request -->
         <div id="option3" class="group center">
-          <div class="space">
-            <fieldset role="group">
-              <legend class="space">
-                <h5 class="noMargin">Machine Information</h5>
-              </legend>
             <div class="left">
-              <div class="left">
-                <label id="label" class="title field" for="">Machine Name: </label>
-                <input type="text" class="input" name="" value="" required="required" placeholder="GISXXDX-1234567">
+              <label id="label" class="title field" for="">Software Type: </label>
+              <select id="selectMe2" class="input">
+                <option value="subOption0">N/A</option>
+                <option value="subOption1">Application</option>
+                <option value="subOption2">Driver</option>
+                <option value="subOption3">Cleanup</option>
+                <option value="subOption4">Update</option>
+              </select>
+            </div>
+        <div class="space">
+          <fieldset role="group">
+                <legend class="">
+                  <h5 class="noMargin">Information of Requested User</h5>
+                </legend>
+                <div class="left">
+                    <label id="label" class="title field" for="username">User's Name: </label>
+                    <input id="username" type="text" class="input" name="username" value="" required="true" placeholder="Full Name">
+                </div>
+                <div class="left">
+                  <div class="left">
+                    <label id="label" class="title field" for="position">Position: </label>
+                    <input id="position" class="input" type="text" name="position" value="" required="true" placeholder="Position">
+                  </div>
+                  <div class="left">
+                    <label id="label" class="title field" for="">Department: </label>
+                    <select id="selectMe" class="input">
+                      <option value="1">Construction</option> <!-- Sub-location -->
+                      <option value="2">Fire Protection</option>
+                      <option value="3">Engineering</option>
+                      <option value="4">Site</option>
+                      <option value="5">Office</option>
+                    </select>
+                  </div>
+                  <div class="left">
+                    <label id="label" class="title field" for="">Site Location: </label>
+                    <select id="selectMe" class="input">
+                      <option value="1">Burnaby</option> <!-- Sub-location -->
+                      <option value="2">Edmonton</option>
+                      <option value="3">Teck EVO</option>
+                      <option value="4">Kemess</option>
+                      <option value="5">Field</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Drive Access -->
+                <div class="left">
+                  <label id="label" class="title field" for="">Drive Access: </label>
+                  <select id="selectMe3" class="input">
+                    <option value="ss1">None</option>
+                    <option value="ss1">BBY S:</option>
+                    <option value="ss1">EDM S:</option>
+                    <option value="ss2">Site</option>
+                  </select>
+                </div>
+                <!-- Additional Request -->
+                  <div class="left">
+                    <label id="label" class="title field" for="">Other Requests: </label>
+                    <select id="selectMe2" class="input">
+                      <option value="softSubOption1">N/A</option>
+                      <option value="softSubOption2">Hardware</option>
+                    </select>
+                  </div>
+                <!--Drive Permissions-->
+                <div id="ss2" class="group3">
+                <div class="left">
+                  <!-- Requester Info -->
+                  <div class="">
+                      <label id="label" class="title field" for="">Site Name: </label>
+                      <input type="text" class="input" id="reqName" name="reqName" value="" required="required" placeholder="Full Name">
+                  </div>
+                </div>
+                <div id="" class=" row smlBox space">
+                  <label id="" class="space title" for="">Folders Permissions: </label>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">01</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">02</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">03</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">04</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">05</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">06</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">07</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">08</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">09</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">10</label>
+                    <select id="selectMe" class="selectSml noMargin">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">11</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">12</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">13</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">14</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">15</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">16</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">17</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">18</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">19</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                  <div class="col-1 fieldAlt">
+                    <label id="" class="title" for="">20</label>
+                    <select id="selectMe" class="selectSml">
+                      <option value="1">N/A</option>
+                      <option value="2">R/W</option>
+                      <option value="3">R/O</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Hardware Request -->
+              <div id="softSubOption2" class="group2 center">
+                <fieldset role="group">
+                  <!-- Hardware Request -->
+                    <div class="left">
+                      <label id="label" class="title field" for="">Hardware Type: </label>
+                      <select id="selectMe2" class="input">
+                        <option value="subOption0">N/A</option>
+                        <option value="subOption1">Phone</option>
+                        <option value="subOption2">Tablet</option>
+                        <option value="subOption3">Laptop</option>
+                        <option value="subOption4">Desktop</option>
+                        <option value="subOption5">Peripherals</option>
+                      </select>
+                    </div>
+                </fieldset>
               </div>
             </div>
-            <div class="left">
-              <div class="left">
-                <label id="label" class="title field" for="">Department: </label>
-                <select id="selectMe" class="input">
-                  <option value="1">Field Construction</option> <!-- Sub-location -->
-                  <option value="2">Field ABFP</option>
-                  <option value="3">Field BCFP</option>
-                  <option value="4">Site</option>
-                  <option value="5">Office</option>
-                </select>
-              </div>
-              <div class="left">
-                <label id="label" class="title field" for="">Site Location: </label>
-                <select id="selectMe" class="input">
-                  <option value="1">Field Construction</option> <!-- Sub-location -->
-                  <option value="2">Field ABFP</option>
-                  <option value="3">Field BCFP</option>
-                  <option value="4">Site</option>
-                  <option value="5">Office</option>
-                </select>
-              </div>
-            </div>
-              <div class="space center">
-                <h5 class="noMargin">Type of Software</h5>
-                <div class="field">
-                  <label class="title" for="">Application</label>
-                  <input type="checkbox" id="" name="Computer" value="Computer" class="">
-                </div>
-                <div class="field">
-                  <label class="title" for="">Driver</label>
-                  <input type="checkbox" id="" name="" value="Projector" class="" required="">
-                </div>
-                <div class="field">
-                  <label class="title" for="">Update</label>
-                  <input type="checkbox" id="" name="" value="Internet Connection" class="" required="true">
-                </div>
-                <div class="field">
-                  <label class="title" for="">Clean up</label>
-                  <input type="checkbox" id="" name="" value="Other" class="" required="true">
-                </div>
-              </div>
-            </fieldset>
           </div>
-        </div>
 
         <!-- Additional Details -->
         <div class="center space">
@@ -620,6 +975,7 @@
         <div class="center space">
           <input id="btnSubmit" class="btn btn-primary" type="submit" value="Submit Request">
         </div>
+      </br>
     </form>
 
 <!-- modal -->
