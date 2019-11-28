@@ -1,4 +1,13 @@
+
+  Date.prototype.toDateInputValue = (function() {
+    var local = new Date(this);
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+  });
+
 $(document).ready(function () {
+
+  $('#datePicker').val(new Date().toDateInputValue());
   $('.group, .group2, .group3, .modal').hide();
   $('.group').hide();
   $('#option1').show();
